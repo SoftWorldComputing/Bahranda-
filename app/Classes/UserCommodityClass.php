@@ -153,6 +153,9 @@ class UserCommodityClass
                 $user->userActivities()->create(["remark" => config('activity.users.user_purchase_comm'), "status" => "completed"]);
 
                 return $this->created("Deal purchased successfully", "true", "purchased");
+            }else{
+            return $this->error("unable to verify transaction", 400);
+
             }
         } else {
             return $this->error("Commodity not available for purchase", 400);
@@ -234,7 +237,7 @@ class UserCommodityClass
                         $wallet->balance = $wallet->balance - $deal_amount;
                         $wallet->save();
 
-                $this->userTransactionClass->storeTransaction($user,$reference,$deal_amount,'purchase'," purchases $quantity  $commodity->commodity_name from wallet");
+                      $this->userTransactionClass->storeTransaction($user,$reference,$deal_amount,'purchase'," purchases $quantity  $commodity->commodity_name from wallet");
 
                     $this->walletHistoryRepo->create([
                         "user_id" => $user->id,
