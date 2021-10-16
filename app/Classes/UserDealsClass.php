@@ -22,7 +22,7 @@ class UserDealsClass
   public function fetchAllDeals($user)
   {
       $data = [];
-      $data['deals'] = DealResource::collection($this->dealRepo->where('user_id',$user->id)->paginate(20));
+      $data['deals'] = DealResource::collection($this->dealRepo->where('user_id',$user->id)->orderBy('created_at','desc')->paginate(20));
       //get active deals
       $data['active_deals'] = $this->dealRepo->where('user_id',$user->id)->whereStatus(1)->count();
       $data['cancelled_deals'] = $this->dealRepo->where('user_id',$user->id)->whereStatus(2)->count();

@@ -145,7 +145,7 @@ class UserWalletClass
 
     public function fundWallet($user,$transactionRef,$amount)
     {
-          $verify = $this->userTransactionClass ->verifyPayment($amount, $transactionRef);
+          $verify = $this->userTransactionClass ->verifyTransaction($amount, $transactionRef);
 
           if($verify)
           {

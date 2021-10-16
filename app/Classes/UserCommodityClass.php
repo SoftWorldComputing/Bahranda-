@@ -98,7 +98,7 @@ class UserCommodityClass
 
             $expected_return = $commodity->getPriceBreakDown($quantity)['expected_return'];
             //perform paystack payment
-            $verify = $this->userTransactionClass ->verifyPayment($deal_amount, $transactionReference);
+            $verify = $this->userTransactionClass ->verifyTransaction($deal_amount, $transactionReference);
              
             if ($verify) {
                 //store deal 

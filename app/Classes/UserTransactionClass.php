@@ -38,8 +38,7 @@ class UserTransactionClass {
         if ($request) {
 
             $result = json_decode($request, true);
-
-            if ($result) {
+            if ($result && in_array('data',$result)) {
                 if ($result['data']) {
                     //something came in
                     if ($result['data']['status'] == 'success') {

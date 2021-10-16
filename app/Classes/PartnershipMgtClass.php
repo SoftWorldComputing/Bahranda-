@@ -20,7 +20,7 @@ class PartnershipMgtClass
 
     public function getAllPartnerships($admin, $keyword = null)
     {
-        $partnerships = $this->partnershipRepo->orderBy('id', 'desc')->paginate(30);
+        $partnerships = $this->partnershipRepo->orderBy('created_at', 'desc')->paginate(30);
         $active_partnerships = $this->partnershipRepo->where('status', 1)->count();
         $completed_partnerships = $this->partnershipRepo->where('status', 3)->count();
         $cancelled_partnerships = $this->partnershipRepo->where('status', 2)->count();
