@@ -23,6 +23,7 @@ class UserWalletController extends Controller
 
     public function fundWallet(UserFundWalletRequest $request)
     {
+        
         return $this->userWalletClass->fundWallet($request->user(),$request->transactionRef);
     }
 
