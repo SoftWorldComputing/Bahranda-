@@ -1,0 +1,31 @@
+#auth-div {
+    margin-top : 100px;
+}
+
+@media (max-width:700px){
+    #auth-div {
+        margin-top : 50px;
+    }
+
+}
+
+.form-check {
+    margin-top: 0px !important;
+}
+
+#profit_analysis p {
+    font-size: 12px !important;
+    font-weight: bold;
+ 
+}
+
+div.noty_type__success {
+    background-color: green;
+    color: white;
+    padding: 10px 2px;
+}
+
+div.noty_type__alert {
+    background-color: #fb9678 ;
+    color: white;
+}

@@ -1,0 +1,5 @@
+@baseUrl= http://bahranda.test/v1
+@token = 
+
+###update profile
+POST {{baseUrl}}/auth
