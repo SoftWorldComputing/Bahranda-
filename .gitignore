@@ -17,9 +17,9 @@ public_html/hot
 
 storage/*.key
 .env
+bahranda_cert.crt
+bahranda_key.key
 Homestead.yaml
 Homestead.json
 /.vagrant
 .phpunit.result.cache
-bahranda_cert.crt
-bahranda_key.key
