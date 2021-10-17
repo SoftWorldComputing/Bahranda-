@@ -33,16 +33,16 @@ class UserTransactionClass {
                 'Authorization: Bearer ' . env('PAYSTACK_SECRET_KEY')
             ]
         );
+
         $request = curl_exec($ch);
         curl_close($ch);
         if ($request) {
 
             $result = json_decode($request, true);
-            if ($result && in_array('data',$result)) {
+            if ($result && ($result['status'] == true)) {
                 if ($result['data']) {
                     //something came in
                     if ($result['data']['status'] == 'success') {
-
                         if ($amount == ($result['data']['amount'] / 100)) {
                             return true;
                         } else {

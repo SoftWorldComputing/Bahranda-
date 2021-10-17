@@ -178,7 +178,7 @@ class UserWalletClass
                     }
                 });
 
-                $user->userActivities()->create(["remark" => config('activity.users.user_funding') + " with $amount", "status" => "completed"]);
+                $user->userActivities()->create(["remark" => config('activity.users.user_funding') . " with $amount", "status" => "completed"]);
 
                 return $this->created("Wallet funded successfully", "true", "funded");
           }else{
