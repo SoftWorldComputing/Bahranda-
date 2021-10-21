@@ -144,7 +144,7 @@
                   @forelse($partnerships as $partnership)
                  <tr>
                      <td>{{ $loop->iteration }}</td>
-                     <td>{{ ucwords($partnership->user->name) }}</td>
+                     <td><a href="{{ route('admin.user_mgt.show',['user' => $partnership->user->id]) }}"> {{ ucwords($partnership->user->name) }}</a></td>
                      <td>{{ ucwords($partnership->commodity->commodity_name) }}</td>
                      <td>{{ intval($partnership->duration) }} Months</td>
                      <td>
