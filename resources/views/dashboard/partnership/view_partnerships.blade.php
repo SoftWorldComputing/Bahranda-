@@ -114,7 +114,7 @@
             <div class="card" style="height : 100%;font-size : 20px">
                <div class="card-body">
                 <h4>Deal User</h4>
-               <p>Name : {{ $partnership->user->name }}</p>
+               <p>  Name : <a href="{{ route('admin.user_mgt.show',['user' => $partnership->user->id]) }}">{{ $partnership->user->name }}</a></p>
                @if($partnership->user->profile_created == 1)
                 <p>Phone : {{ $partnership->user->profile->phone }} </p>
                 @endif
