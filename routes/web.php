@@ -48,6 +48,7 @@ Route::post('/admin/admin-mgt/create', 'Admin\AdminMgtController@CreateAdmin')->
 Route::post('/admin/admin-mgt/{admin}/update-profile-image', 'Admin\AdminMgtController@UpdateAdminProfileImage')->name('admin.admin_mgt.profile_image.update');
 Route::get('/admin/admin-mgt/{admin}/remove', 'Admin\AdminMgtController@DeleteAdmin')->name('admin.adminmgt.remove');
 
+
 //user mgt
 Route::get('/admin/user-mgt/user-list', 'User\UserController@list')->name('admin.user_mgt.list');
 Route::get('/admin/user-mgt/{user}/show', 'User\UserController@show')->name('admin.user_mgt.show');
