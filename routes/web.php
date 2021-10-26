@@ -1,7 +1,5 @@
 <?php
 
-use App\Mail\OrderReceipt;
-use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,8 +11,7 @@ use Illuminate\Support\Facades\Route;
 | routes are loaded by the RouteServiceProvider within a group which
 | contains the "web" middleware group. Now create something great!
 |
-*/
-
+ */
 
 Route::get('/', 'Admin\Sessioncontroller@LoginView');
 // Route::get('/admin/login', 'Admin\Sessioncontroller@LoginView')->name('admin.login.view');
@@ -70,7 +67,6 @@ Route::get('/admin/commodity-mgt/{commodity}/delete', 'Admin\CommodityMgtControl
 
 Route::post('/admin/user-mgt/{user}/fund-user', 'User\UserController@fundUser')->name('admin.user_mgt.fund_user');
 
-
 //add new batch
 Route::post('/admin/commodity-mgt/{commodity}/add-new-batch', 'Admin\CommodityMgtController@StoreNewBatch')->name('admin.commodity.add_new_batch');
 Route::post('/admin/commodity-mgt/{commodity}/change-batch', 'Admin\CommodityMgtController@ChangeBatch')->name('admin.commodity.change_batch');
@@ -80,21 +76,11 @@ Route::get('/admin/commodity-mgt/{batch_no}/price_upload_batch_data', 'Admin\Com
 
 Route::get('/admin/commodity-mgt/{commodity}/purchase-for-user', 'Admin\CommodityMgtController@PurchaseCommodityView')->name('admin.commodity_price.purchase_for_user');
 
-
 Route::get('/admin/commodity-mgt/purchase-for-user/{user}/fetch_user_balance', 'Admin\CommodityMgtController@FetchUserBalance')->name('admin.commodity_price.purchase_for_user.fetch_user_balance');
-
 
 Route::get('/admin/commodity-mgt/purchase-for-user/{commodity}/{quantity}/fetch-commodity-price', 'Admin\CommodityMgtController@FetchCommodityPrice')->name('admin.commodity_price.purchase_for_user.commodity_price');
 
-
 Route::post('/admin/commodity-mgt/{commodity}/purchase-for-user', 'Admin\CommodityMgtController@PurchaseCommodity')->name('admin.commodity_price.purchase_for_user.store');
-
-
-
-
-
-
-
 
 //warehouse mgt
 Route::get('/admin/warehouse-mgt/list-warehouses', 'Admin\WareHouseController@ListWarehouses')->name('admin.warehousemgt.list');
@@ -108,7 +94,6 @@ Route::get('/admin/warehouse-mgt/{batch_no}/warehouse-checkout-request-data', 'A
 Route::post('/admin/warehouse-mgt/{warehouse}/checkout-from-warehouse', 'Admin\WareHouseController@WareHouseCheckoutRequestSubmit')->name('admin.warehousemgt.checkout.requests.submit');
 
 Route::post('/admin/warehouse-mgt/{batch_no}/warehouse-authorise-checkout', 'Admin\WareHouseController@AuthorizeWarehouseCheckout')->name('admin.warehousemgt.checkout.authorize_checkout');
-
 
 //deals  mgt  //deals aand partnership arre synonymous
 Route::get('/admin/partnership-mgt/all-deals', 'Admin\PartnershipMgtController@AllPartnership')->name('admin.partnership.list');
