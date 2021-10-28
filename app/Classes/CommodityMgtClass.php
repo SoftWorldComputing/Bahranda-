@@ -299,7 +299,7 @@ class CommodityMgtClass
 
                   return ['status' => "success", "message" => "Deal purchased successfully"];
             }else{
-                 return ["status" => "error", "message" => "User does not have enough balance"];
+                 return ["status" => "error", "message" => "Insufficient balance. Please fund your wallet to continue"];
             }
     }
 

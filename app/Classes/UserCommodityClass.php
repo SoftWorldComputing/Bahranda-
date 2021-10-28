@@ -258,7 +258,7 @@ class UserCommodityClass
 
                 return $this->created("Deal purchased successfully", "true", "purchased");
             }else{
-                 return $this->error("User does not have enough balance", 400);
+                 return $this->error("Insufficient balance. Please fund your wallet to continue", 400);
             }
         } else {
             return $this->error("Commodity not available for purchase", 400);
