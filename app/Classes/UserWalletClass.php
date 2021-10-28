@@ -77,7 +77,7 @@ class UserWalletClass
         }
         if(($balance <= 0))
         {
-            return $this->error("Insufficent balance",400);
+            return $this->error("Insufficient balance. Please fund your wallet to continue",400);
         }
         if(  $amount  > $balance)
         {
