@@ -195,6 +195,7 @@
 
           <p>Profit : @if($partnership->real_amount_sold  > 0) ₦{{ number_format( ($partnership->real_amount_sold * $partnership->quantity)  - ($partnership->partnership_br->sell_price *  $partnership->quantity))}} @else Commodity Not Sold Yet @endif</p>
 
+          
 
 
           <p>After Deal Profit : @if($partnership->real_amount_sold  > 0) ₦{{ number_format( ($partnership->real_amount_sold * $partnership->quantity)  - $partnership->expected_return )}} @if(($partnership->real_amount_sold * $partnership->quantity - $partnership->expected_return) > 0) <span class="badge badge-success">Gain </span> @else <span class="badge badge-danger">Loss</span> @endif  @else Commodity Not Sold Yet @endif</p>
