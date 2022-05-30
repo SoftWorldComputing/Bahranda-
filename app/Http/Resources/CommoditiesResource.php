@@ -20,7 +20,7 @@ class CommoditiesResource extends JsonResource
             "commodity_name" => ucwords($this->commodity_name),
             "description" => ($this->description),
             "price" => ($this->purchase_price),
-            "unit" => "Per bag/truck",
+            "unit" => "Per bag",
             "duration" => ceil($this->duration) . " Months",
             "profit_percentage" => $this->profit_margin . "%",
             "image" => asset('storage/' . $this->product_image),
