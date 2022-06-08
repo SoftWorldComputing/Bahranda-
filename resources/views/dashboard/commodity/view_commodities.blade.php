@@ -24,7 +24,7 @@
             <h3>Cost breakdown</h3>
           <p>Commodity Name : {{ $product->commodity_name }}</p>
           <p>Purchase  price : ₦{{ number_format($product->buy_price) }}</p>
-          <p>Total Purchase  price(per bag) : ₦{{ number_format($product->purchase_price) }}</p>
+          <p>Total Purchase  price( ) : ₦{{ number_format($product->purchase_price) }}</p>
           <p>Target Sell  price : ₦{{ number_format($product->sell_price) }}</p>
           <p>Profit Percentage : {{ $product->profit_margin}}%</p>
           <p>Warehouing : ₦{{ number_format($product->warehousing) }}</p>
@@ -34,8 +34,8 @@
           <p>Description : {{ $product->description }}</p>
           <p>Availability : {{ $product->availability == 1 ? "available" : "unavailable"}}</p>
           <p>Current Batch : {{ $product->currentBatch->batch_no }}</p>
-          <p>Current Batch Quantity (bags) : {{ $product->currentBatch->in_stock}}</p>
-          <p>Minimum Quantity Purchasable (bags) : {{ $product->minimum_quantity}}</p>
+          <p>Current Batch Quantity ( ) : {{ $product->currentBatch->in_stock}}</p>
+          <p>Minimum Quantity Purchasable ( ) : {{ $product->minimum_quantity}}</p>
         </div>
     </div>
 </div>
@@ -176,7 +176,7 @@
                       <tr>
                         <th>Sn</th>
                         <th> Batch No</th>
-                        <th> In Stock(bags)</th>
+                        <th> In Stock( )</th>
                         <th>Last Update</th>
                         <th>Current</th>
                         <th></th>
