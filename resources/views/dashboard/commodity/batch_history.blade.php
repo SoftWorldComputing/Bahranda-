@@ -21,7 +21,7 @@
                         <th> Batch No</th>
                         <th> Action </th>
                         <th> Total </th>
-                        <th> In Stock(bags)</th>
+                        <th> In Stock( )</th>
                         <th>Date</th>
                      
                         <th></th>
@@ -35,8 +35,8 @@
                         <td>{{ $loop->iteration  }}</td>
                         <td>{{ $log->batch_no }}</td>
                         <td>{{ $log->action_type == 1 ? 'Check in' : 'Checkout'}}</td>
-                        <td>{{ $log->quantity }} bags</td>
-                        <td>{{ $log->in_stock }} bags</td>
+                        <td>{{ $log->quantity }} </td>
+                        <td>{{ $log->in_stock }} </td>
                         <td>{{ $log->created_at->diffForHumans() }}</td>
                         
                        </tr>
