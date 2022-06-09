@@ -21,7 +21,7 @@
                         <th> Batch No</th>
                         <th> Action </th>
                         <th> Total </th>
-                        <th> In Stock( )</th>
+                        <th> In Stock </th>
                         <th>Date</th>
                      
                         <th></th>
